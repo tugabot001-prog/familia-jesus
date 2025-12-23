@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Conselho Personalizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        a button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎁 O teu dia de sorte chegou!</h2>
+    <p>Terás direito a um conselho personalizado para ti!!</p>
+
+    <p><strong>Para receberes um conselho à tua medida, digita o teu número de telefone</strong></p>
+
+    <input type="text" id="telefone" placeholder="Ex: 912345678">
+    <br>
+    <button onclick="verificarNumero()">Receber conselho</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script>
+function verificarNumero() {
+    const numero = document.getElementById("telefone").value;
+    const resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = "";
+
+    switch (numero) {
+        case "912973279":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Bernardo</strong>, aconselho-te a entrar neste curso de treinamento de basquetebol!</p>
+            <a href="https://upcursosgratis.com.br/curso-online-gratis/treinamento-de-basquete" target="_blank">
+                <button>Aceder ao curso</button>
+            </a>`;
+            break;
+
+        case "915850005":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Mónica</strong>, acabastes de ganhar acesso a 1 reunião no grupo A.A - Alcoólicos Anónimos</p>
+            <p>Reunião aberta a pessoas que não são membros de AA: todas as sextas-feiras às 21h30</p>`;
+            break;
+
+        case "919173837":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Guilherme</strong>, acabastes de ganhar acesso a 1 reunião no grupo A.A - Alcoólicos Anónimos</p>
+            <p>Reunião aberta a pessoas que não são membros de AA: todas as sextas-feiras às 21h30</p>`;
+            break;
+
+        case "961262601":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Rita</strong>, acabastes de ganhar acesso a 1 reunião no grupo A.A - Alcoólicos Anónimos</p>
+            <p>Reunião aberta a pessoas que não são membros de AA: todas as sextas-feiras às 21h30</p>`;
+            break;
+
+        case "961078197":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Diogo</strong>, acabastes de ganhar acesso a 1 reunião no grupo A.A - Alcoólicos Anónimos</p>
+            <p>Reunião aberta a pessoas que não são membros de AA: todas as sextas-feiras às 21h30</p>`;
+            break;
+
+        case "917672893":
+            resultado.innerHTML = `
+            <p><strong>Olá senhora Palmira</strong>, acabou de ganhar um curso para aprender de uma vez por todas a cantar!</p>
+            <a href="https://musixe.com/assinar?planId=7021" target="_blank">
+                <button>Aceder ao curso</button>
+            </a>`;
+            break;
+
+        case "932346900":
+            resultado.innerHTML = `
+            <p><strong>Parabéns senhor António</strong>, acabou de ganhar um curso para tratar bem os animais domésticos. Principalmente gatos com o nome de Fernandinho</p>`;
+            break;
+
+        case "961357696":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Margarida</strong>, aconselho-lhe a participar num curso de cordas e teclas, visto você nunca ter tido nenhuma aula</p>`;
+            break;
+
+        case "939446265":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Palmira</strong>, aconselho-lhe a comer mais peixe nas suas refeições, porque peixe faz bem à saúde!</p>`;
+            break;
+
+        case "910248632":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Paula</strong>, aconselho a voltar novamente para a rádio, pois os ouvintes da rádio cultural de Salreu estão com saudades!</p>`;
+            break;
+
+        case "963605982":
+            resultado.innerHTML = `
+            <p><strong>Parabéns António</strong>, para melhorar o seu toque culinário, aconselho-lhe uma formação de empratamento num restaurante executivo no estádio do Sport Lisboa e Benfica!</p>`;
+            break;
+
+        case "933545957":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Carlos</strong>, aconselho-lhe a aproveitar as promoções de Black Friday e investir num transplante capilar no Bangladesh!</p>`;
+            break;
+
+        case "968280471":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Gino</strong>, aconselho-lhe a mudar para um clube que não seja tão lento a decidir um penálti!</p>`;
+            break;
+
+        case "919152043":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Sandra</strong>, aconselho-lhe um curso de resiliência/paciência para com os seus filhos que são exemplares!</p>`;
+            break;
+
+        case "912675110":
+            resultado.innerHTML = `
+            <p><strong>Parabéns Pedro</strong>, aconselho-lhe a não expulsar o seu filho, por isso tire um curso de árbitro!</p>`;
+            break;
+
+        default:
+            resultado.innerHTML = `
+            <p>❌ Não conheço ninguém com esse número.</p>
+            <p>Por favor, insira outro número.</p>`;
+    }
+}
+</script>
+
+</body>
+</html>
